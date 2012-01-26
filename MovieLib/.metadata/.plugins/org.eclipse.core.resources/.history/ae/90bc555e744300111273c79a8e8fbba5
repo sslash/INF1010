@@ -1,0 +1,17 @@
+
+public class MovieLib {
+	
+	/* Array of the movies that exists in the library */
+	private Movie [] myMovies;
+	
+	/* Size of movie library */
+	private int libSize;
+	
+
+	
+	public MovieLib(int libSize) {
+		
+		this.libSize = libSize;
+		myMovies = new Movie[libSize];
+	}
+}

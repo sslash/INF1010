@@ -1,0 +1,36 @@
+
+public class MovieLib {
+	
+	/* Array of the movies that exists in the library */
+	private Movie [] myMovies;
+	
+	/* Size of movie library */
+	private int libSize;
+	
+	/* Index of next free movie spot in the library */
+	private int nextFreeIndex;
+	
+
+	public MovieLib() {}	
+	
+	/**
+	 * Adds a movie to the library
+	 * @param movie		movie to be added
+	 * 
+	 */
+	public void addMovie(Movie movie) {
+		myMovies[nextFreeIndex] = movie;
+		
+		nextFreeIndex ++;
+	}
+
+	public MovieLib(int libSize) {
+		
+		this.libSize = libSize;
+		myMovies = new Movie[libSize];
+		nextFreeIndex = 0;
+	}
+	
+}
+
+
