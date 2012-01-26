@@ -1,51 +1,52 @@
 
 public class MovieLib {
 	
-	/* Array of the movies that exists in the library */
-	private Movie [] myMovies;
 	
-	/* Size of movie library */
-	private int libSize;
+	/* Our collection of movies */
+	private MovieList listOfMovies;
 	
-	/* Index of next free movie spot in the library */
-	private int nextFreeIndex;
+	
+	/* Master owner of the library */
+	private String owner;
+	
 	
 	
 
+	/** Simple empty constructor, in case we need it */
 	public MovieLib() {}	
 	
+	
 	/**
-	 * Adds a movie to the library
-	 * @param movie		movie to be added
-	 * 
+	 * Creates a library with a spesified size
+	 *
+	 * @param libSize
+	 * @param owner
 	 */
-	public void addMovie(Movie movie) {
-		myMovies[nextFreeIndex] = movie;
-		
-		nextFreeIndex ++;
-		
-		/* Double the size of the array if needed */
-		if ( nextFreeIndex > libSize/2) {
-			System.out.println("Had to extend the array!");
-			Movie [] newArray = new Movie [libSize*2];
-			int i = 0;
-			for (Movie m : myMovies) {
-				newArray[i] = m;
-				i++;
-			}
-			
-			/* Copy the new array over */
-			myMovies = newArray;		
-			libSize = libSize *2;
-		}
+	public MovieLib(int libSize, String owner) {
+		init(libSize, owner);		
 	}
 
+
+	/**
+	 * Initializes the object
+	 * 
+	 * @param libSize	size of the library
+	 * @param owner		owner of the library
+	 */
+	private void init(int libSize, String owner) {
+		listOfMovies = new MovieList(libSize);
+		this.owner = owner;
+	}
 	
-	public MovieLib(int libSize) {
-		
-		this.libSize = libSize;
-		myMovies = new Movie[libSize];
-		nextFreeIndex = 0;
+	
+	/**
+	 * Adds a new movie to the library's collection
+	 *  
+	 * @param movie		to be added
+	 * @return true if the movie was added, false otherwise
+	 */
+	public boolean addMovie( Movie movie ) {
+		return listOfMovies.addMovie(movie);
 	}
 	
 	
@@ -53,11 +54,7 @@ public class MovieLib {
 	 * Prints all the movies in the library
 	 */
 	public void printAllMovies() {
-		
-		for (Movie m : myMovies ) {
-			if ( m != null ) 
-				m.print();
-		}		
+		listOfMovies.printAllMovies();		
 	}
 	
 
@@ -67,14 +64,8 @@ public class MovieLib {
 	 * @param name		Name of the movie to get
 	 * @return			The Movie object, if found
 	 */
-	public Movie getMovie(String name) {
-		for ( Movie movie : myMovies ) {
-			if ( movie.getName().equals(name))
-				return movie;
-		}
-		
-		/* Didn't find what we were looking for =( */
-		return null;		
+	public Movie getMovie(String movieName) {
+		return listOfMovies.getMovie(movieName);	
 	}
 	
 }

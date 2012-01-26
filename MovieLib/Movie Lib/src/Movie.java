@@ -19,7 +19,13 @@ public class Movie {
 	}
 	
 	
+	@Override
+	public String toString() {
+		return "Movie [name=" + name + "]";
+	}
+
+
 	public void print() {
-		System.out.println("My name is " + name);		
+		System.out.println( toString() );		
 	}	
 }
