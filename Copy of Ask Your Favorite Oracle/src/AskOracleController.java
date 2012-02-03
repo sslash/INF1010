@@ -5,7 +5,6 @@ import java.util.Random;
 
 public class AskOracleController {
 	
-	private int highestBasePriority = 0;
 	
 	public static void main(String [] args ) {
 		runSimulation();			
@@ -82,26 +81,6 @@ public class AskOracleController {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}		
-	}
-
-	private Map <String, Oracle> oracles;
-	
-	public AskOracleController(int numberOfOracles) {
-		oracles = new HashMap <String, Oracle>();
-	}
-	
-	
-	
-	public void addStudentToOracle(IfiPerson student, String oracleName) {
-		Oracle oracle = oracles.get(oracleName);
-		oracle.addStudentToHelpList(student);
-	}
-	
-	
-	public IfiPerson helpNextStudent(String oracleName) {
-		Oracle oracle = oracles.get(oracleName);
-		IfiPerson student = oracle.getNextStudentToHelp();		
-		return student;
 	}
 
 	private static int getLowestBasePriority(Oracle oracle) {
