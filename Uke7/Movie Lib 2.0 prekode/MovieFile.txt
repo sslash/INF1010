@@ -1,0 +1,17 @@
+blueray#1080p#The Shawshank Redemption#1994
+blueray#1080p#The Godfather#1972
+blueray#720p#The Godfather: Part II#1974
+blueray#1080i#Pulp Fiction#1994
+dvd#Superbabies: Baby Geniuses 2#2004
+dvd#Daniel the Wizard#2004
+dvd#Dream Well#2009
+dvd#Manos: The Hands of Fate#1966
+dvd#Monster a-Go Go#1965
+dvd#Night Train to Mundo Fine#1966
+dvd#The Skydivers#1963
+dvd#Ben & Arthur#2002
+dvd#The Starfighters#1964
+dvd#Pledge This!#2006
+dvd#Zombie Nation#2004
+tv-show#Sopranos#1999
+tv-episodes##Sopranos##1##Pilot#Long#Denial, Anger, Acceptance#Meadowlands#College#Pax Soprana#Down Neck#The Legend of Tennessee Moltisanti#Boca#A Hit Is a Hit#Nobody Knows Anything#Isabella#I Dream of Jeannie Cusamano
