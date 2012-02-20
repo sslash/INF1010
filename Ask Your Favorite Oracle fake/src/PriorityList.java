@@ -5,7 +5,10 @@ public interface PriorityList {
 	/**
 	 * Returns the first element in the list,
 	 * making the list a priority list (since the 
-	 * list is sorted)
+	 * list is sorted). The element that is returned is also
+	 * to be removed from the list.
+	 * 
+	 * 
 	 */
 	public IfiPerson get();
 
@@ -19,7 +22,8 @@ public interface PriorityList {
 	
 	
 	/**
-	 * Get an IfiPerson with the given name
+	 * Get an IfiPerson with the given name.
+	 * It should not delete this person from the list
 	 * 
 	 * @param name		of the person
 	 * @return		The IFiPerson instance, null if not found

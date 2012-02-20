@@ -53,7 +53,7 @@ public class Oracle implements IfiPerson {
 
 	@Override
 	/**
-	 * Compare the skill level
+	 * Compare this objects skillLevel with others skillLevel.
 	 */
 	public int compareMeTo(IfiPerson other) {
 		// TODO: Implement this function
@@ -70,6 +70,13 @@ public class Oracle implements IfiPerson {
 
 
 	@Override
+	/* An oracles basePriority is simply the same as his
+	 * skillLevel. Note that there is no property basePriority.
+	 * This is only for simplicity, and to show the principle of interfaces.
+	 * 
+	 * (non-Javadoc)
+	 * @see IfiPerson#getBasePriority()
+	 */
 	public int getBasePriority() {		
 		// TODO: Implement this function
 		return 0;
@@ -102,6 +109,6 @@ public class Oracle implements IfiPerson {
 
 	@Override
 	public void setBasePriority(int basePriority) {
-		throw new UnsupportedOperationException("Oracles does not have a base priority");	
+		throw new UnsupportedOperationException("Oracles does not have a base priority property");	
 	}
 }

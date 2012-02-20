@@ -6,6 +6,13 @@ public class Student implements IfiPerson {
 	private int		skillLevel;
 	
 	
+	/**
+	 * 
+	 * A students priority is defined by the sum of the basePriority
+	 * and skillLevel
+	 * 
+	 * @return this students priority
+	 */
 	public int getPriority() {
 		return basePriority + skillLevel;
 	}
@@ -30,8 +37,11 @@ public class Student implements IfiPerson {
 	
 	@Override
 	/**
-	 * If other is a student, compare priority,
-	 * else, compare skill level
+	 * If other is a Student, compare this objects' priority with others' priority.
+	 * Priority is defined by the sum of basePriority and skillLevel.
+	 * I.e the result from the function getPriority().
+	 * 
+	 * Else, compare this objects' skillLevel with others' skill level.
 	 *
 	 */
 	public int compareMeTo(IfiPerson other) {
