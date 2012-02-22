@@ -86,10 +86,10 @@ public class AskOracleController {
 	
 	
 	private static int getLowestBasePriority(Oracle oracle) {
-		IfiPerson personWithHighestPri = oracle.getStudentWithLowestPriority();
-		if ( personWithHighestPri == null)
+		IfiPerson personWithLowestPriority = oracle.getStudentWithLowestPriority();
+		if ( personWithLowestPriority == null)
 			return 0;
 		else
-			return personWithHighestPri.getBasePriority();
+			return personWithLowestPriority.getBasePriority();
 	}
 }
