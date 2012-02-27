@@ -11,7 +11,7 @@ public class Oppgave2 {
 
 	public Oppgave2() {
 		testAddNyPizza();
-		testAddChicagoPizza();
+		//testAddChicagoPizza();
 
 	}
 
