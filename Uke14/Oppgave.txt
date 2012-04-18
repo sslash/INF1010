@@ -1,0 +1,26 @@
+1.
+Lag et memory-spill. Det skal fungere ved at man skal ha en matrise av luker (bruk Swing biblioteket i Java). Bak hver luke skal det skjule seg et tall.
+La en luke være en JButton som er initiert til å ikke ha noen verdi. Når man klikker på knappen blir verdien til knappen satt til tallet som ruten skjuler.
+Spillet fungerer ved at man klikker på en luke hvor tallet som skjuler seg bak luken da blir åpnet. Man skal så finne en ny luke som har det samme tallet.
+Til dette har man kun ett forsøk. Altså, hvis man ikke finner igjen den samme ruten når man prøver å åpne rute nummer 2, blir begge lukene lukket.
+Dersom den nye luken man åpnet har lik verdi som den første, forblir de to lukene åpne. Spillet er ferdig når man har åpnet alle lukene. Spillet skal ta vare på
+antall forsøk man har brukt.
+
+
+
+IntNode finnLukeSomErLikMeg(IntNode førsteValg) {
+   if jeg (this) har verdi lik førsteValg {
+       returner meg
+
+  }  else {
+      hvis minNeste == null
+          return null
+      else     
+         return minNeste.finnLukeSomErLikMeg(førsteValg);
+    }
+}
+
+
+2.
+Lag en simpel kalkulator i Swing. Kalkulatoren skal støtte addisjon, multiplikasjon, divisjon, og substraksjon.
+For enkelhetsskyld skal kalkulatoren kun operere på to tall.
