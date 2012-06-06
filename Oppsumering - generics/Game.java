@@ -17,6 +17,10 @@ class Game {
 	public Game( String name ) {
 		this.name = name;
 	}
+
+	public String getName() {
+		return name;
+	}
 }
 
 class Ps3Game extends Game {
@@ -33,7 +37,7 @@ class WiiGame extends Game {
 }
 
 class XboxGame extends Game {
-	public XBoxGame ( String name ) {
+	public XboxGame ( String name ) {
 		super ( name );
 	}
 }
